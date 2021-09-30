@@ -1,0 +1,19 @@
+<div class="jumbotron">
+    <h1> Add Hotels </h1>
+</div>
+<div *ngIf= "alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Good Work!!!</strong> Your Data Stored Successfully.
+    <button (click)=" closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  
+  <label>Name of Hotel </label>
+  <input [(ngModel)] = name type="text" class="form-control" placeholder="Enter Name" name= "name">
+  <label>Place of Hotel </label>
+  <input [(ngModel)] = place type="text" class="form-control" placeholder="Enter place" name= "place">
+  <label>EmailId of Hotel </label>
+  <input [(ngModel)] = emailid type="text" class="form-control" placeholder="Enter EmailId" name= "emailid">
+
+  <!-- <label>Email</label>
+  <input [(ngModel)] = emailid type="text" class="form-control" placeholder="Enter emailid" > -->
+
+    <button type="submit" class="btn btn-primary"(click) = "createhotel()">Submit</button>
